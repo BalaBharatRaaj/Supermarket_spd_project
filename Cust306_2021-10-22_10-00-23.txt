@@ -1,4 +1,0 @@
-107 Grapes 300 g 57.0 
-111 Mango 3 kg 450.0 
-108 Guava 3 kg 300.0 
-Total Price: 807.0
