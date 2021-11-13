@@ -32,12 +32,13 @@ public class AddProduct {
                     myRs1.next();
                     String[] temp = quantity.split(" ");
                     double user_quantity, gn_quantity;
-                    if("kg".equals(temp[1])){user_quantity = Float.valueOf(temp[0])*1000;}
+                    if("kg".equals(temp[1]) || "kl".equals(temp[1])){user_quantity = Float.valueOf(temp[0])*1000;}
                     else if("mg".equals(temp[1])){user_quantity = Float.valueOf(temp[0])*0.001;}
                     else if("ml".equals(temp[1])){user_quantity = Float.valueOf(temp[0])*0.001;}
                     else{user_quantity = Float.valueOf(temp[0]);}
                     temp = myRs1.getString("stock").split(" ");
-                    if("kg".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*1000;}
+                    //20 kg or 200 g
+                    if("kg".equals(temp[1]) || "kl".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*1000;}
                     else if("mg".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
                     else if("ml".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
                     else{gn_quantity = Float.valueOf(temp[0]);}
@@ -70,6 +71,7 @@ public class AddProduct {
     }
     
     public Vector<String> similar_products_name(String text){
+        //Lett
         Vector<String> product_list = new Vector<String>();
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
@@ -114,6 +116,7 @@ public class AddProduct {
     }
     
     public int complete_product_name(String product_name){
+        //Lettuce 1 kg
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
@@ -192,7 +195,7 @@ public class AddProduct {
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
-            String[] app = cust_name.split(" ");
+            String[] app = cust_name.split(" ", 2);
             Prestmt = myConn.prepareStatement("select cust_id from customers where cust_name = ? and phone_no = ?");
             Prestmt.setString(1, app[1]);
             Prestmt.setString(2, app[0]);

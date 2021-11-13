@@ -1,0 +1,14 @@
+			BANARAS SUPERMARKET
+		No.8, Vivekanandar Street
+		Dubai Shortcut Road
+		Dubai Main Road
+		Dubai
+		Ph.No: 9876543210
+
+ Customer ID: 311   Customer Name: Sairam   Phone no: 8754610569
+---------------------------------------------------------------------
+ Product ID	Product Name	Quantity	Price
+ 110		Lemon      	200 g		58.0
+ 150		Zucchini   	3 kg		660.0
+ 
+			Total Price: 718.0

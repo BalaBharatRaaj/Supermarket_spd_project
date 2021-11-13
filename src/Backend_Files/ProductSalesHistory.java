@@ -5,6 +5,7 @@
  */
 package Backend_Files;
 import java.sql.*;
+import java.util.HashMap;
 /**
  *
  * @author Bala
@@ -18,144 +19,143 @@ public class ProductSalesHistory {
         this.array2 = ordered_dates;
     }
     
-    public int[] product_sales_month(String product_name, int product_id, int month){
-        int[] ordered = new int[13];
-        for(int i = 0; i<12; i++){
-            ordered[i] = 0;
-        }
+    public int[] getarray1(){
+        return array1;
+    }
+    
+    public String[] getarray2(){
+        return array2;
+    }
+    public ProductSalesHistory() {
+         //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public HashMap<Integer,Double> product_sales_month(int product_id, int month){
+        String[] temp;
+        double gn_quantity;
+        HashMap<Integer, Double> map = new HashMap<>();
         try {
-            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini-project", "root", "root");
+            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
             if(product_id != -1){
-                Prestmt = myConn.prepareStatement("select month(date_of_purchase) as month_purchase from product_sales where product_id = ?");
+                Prestmt = myConn.prepareStatement("select year(date_of_purchase) as year, quantity from product_sales where product_id = ? and month(date_of_purchase) = ?");
                 Prestmt.setInt(1, product_id);
+                Prestmt.setInt(2, month);
                 ResultSet myRs = Prestmt.executeQuery();
                 while(myRs.next()){
-                    ordered[myRs.getInt("month_purchase")] += 1;
+                    temp = myRs.getString("quantity").split(" ");
+                    if("kg".equals(temp[1]) || "kl".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*1000;}
+                    else if("mg".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else if("ml".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else{gn_quantity = Float.valueOf(temp[0]);}
+                    if(map.containsKey(myRs.getInt("year"))){
+                        map.replace(myRs.getInt("year"), map.get(myRs.getInt("year")) + gn_quantity);
+                    }
+                    else{
+                        map.put(myRs.getInt("year"), gn_quantity);
+                    }
                 }
-                return ordered;
-            }
-            else if(product_name.equals("") != true){
-                Prestmt = myConn.prepareStatement("select month(date_of_purchase) as month_purchase from product_sales where product_id = ?");
-                Prestmt.setString(1, product_name);
-                ResultSet myRs = Prestmt.executeQuery();
-                while(myRs.next()){
-                    ordered[myRs.getInt("month_purchase")] += 1;
-                }
-                return ordered;
+                return (HashMap<Integer,Double>)map.clone();
             }
             else{
                 System.out.println("Both the values are empty");
-                return new int[] {-1};
+                map.clear();
+                map.put(-1,-1.00);
+                return (HashMap<Integer, Double>)map.clone();
             }
         } 
         catch(SQLException ex) {
             System.out.println(ex);
-            return new int[] {-1};
+            map.clear();
+            map.put(-1,-1.00);
+            return (HashMap<Integer, Double>)map.clone();
         }
     }
     
-    public int[] product_sales_year(String product_name, int product_id, int year){
-        int[] ordered = new int[13];
-        for(int i = 0; i<12; i++){
-            ordered[i] = 0;
-        }
+    public HashMap<Integer,Double> product_sales_year(int product_id, int year){
+        String[] temp;
+        double gn_quantity;
+        HashMap<Integer, Double> map = new HashMap<>();
         try {
-            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini-project", "root", "root");
+            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
             if(product_id != -1){
-                Prestmt = myConn.prepareStatement("select month(date_of_purchase) as month_purchase from product_sales where product_id = ? and year = ?");
+                Prestmt = myConn.prepareStatement("select quantity, month(date_of_purchase) as month from product_sales where product_id = ? and year(date_of_purchase) = ?");
                 Prestmt.setInt(1, product_id);
+                Prestmt.setInt(2, year);
                 ResultSet myRs = Prestmt.executeQuery();
                 while(myRs.next()){
-                    ordered[myRs.getInt("month_purchase")] += 1;
+                    temp = myRs.getString("quantity").split(" ");
+                    if("kg".equals(temp[1]) || "kl".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*1000;}
+                    else if("mg".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else if("ml".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else{gn_quantity = Float.valueOf(temp[0]);}
+                    if(map.containsKey(myRs.getInt("month"))){
+                        map.replace(myRs.getInt("month"), map.get(myRs.getInt("month")) + gn_quantity);
+                    }
+                    else{
+                        map.put(myRs.getInt("month"), gn_quantity);
+                    }
                 }
-                return ordered;
-            }
-            else if(product_name.equals("") != true){
-                Prestmt = myConn.prepareStatement("select month(date_of_purchase) as month_purchase from product_sales where product_id = ? and year = ?");
-                Prestmt.setString(1, product_name);
-                ResultSet myRs = Prestmt.executeQuery();
-                while(myRs.next()){
-                    ordered[myRs.getInt("month_purchase")] += 1;
-                }
-                return ordered;
+                return map;
             }
             else{
                 System.out.println("Both the values are empty");
-                return new int[] {-1};
+                map.clear();
+                map.put(-1,-1.00);
+                return (HashMap<Integer, Double>)map.clone();
             }
         } 
         catch(SQLException ex) {
             System.out.println(ex);
-            return new int[] {-1};
+            map.clear();
+            map.put(-1,-1.00);
+            return (HashMap<Integer, Double>)map.clone();
         }
     }
     
-    public ProductSalesHistory product_sales_dates(String product_name, int product_id, String start_date, String end_date){
+    public HashMap<String, Double> product_sales_dates(int product_id, String start_date, String end_date){
+        double gn_quantity;
+        String[] temp;
+        HashMap<String, Double> map = new HashMap<>();
         try {
-            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini-project", "root", "root");
+            Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
             if(product_id != -1){
-                Prestmt = myConn.prepareStatement("select count(distinct date_of_purchase) as count_date from product_sales where product_id = ? and (date_of purchase between ? and ?)");
-                Prestmt.setInt(1, product_id);
-                Prestmt.setDate(2, Date.valueOf(start_date));
-                Prestmt.setDate(2, Date.valueOf(end_date));
-                ResultSet myRs = Prestmt.executeQuery();
-                myRs.next();
-                
-                String[] ordered_date = new String[myRs.getInt("count_date")];
-                int[] ordered_count = new int[myRs.getInt("count_date")];
-                
-                Prestmt = myConn.prepareStatement("select count(date_of_purchase) as count_date, date_of_purchase from product_sales where product_id = ? and (date_of purchase between ? and ?) group by date_of_purchase order by date_of_purchase");
+                ResultSet myRs;
+                Prestmt = myConn.prepareStatement("select quantity, date_of_purchase from product_sales where product_id = ? and (date_of_purchase between ? and ?)");
                 Prestmt.setInt(1, product_id);
                 Prestmt.setDate(2, Date.valueOf(start_date)); //yyyy-mm-dd format
-                Prestmt.setDate(2, Date.valueOf(end_date));
+                Prestmt.setDate(3, Date.valueOf(end_date));
                 myRs = Prestmt.executeQuery();
                 
-                int index = 0;
-                
                 while(myRs.next()){
-                    ordered_date[index] = myRs.getDate("date_of_purchase").toString();
-                    ordered_count[index] = myRs.getInt("count_date");
-                    index++;
+                    temp = myRs.getString("quantity").split(" ");
+                    if("kg".equals(temp[1]) || "kl".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*1000;}
+                    else if("mg".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else if("ml".equals(temp[1])){gn_quantity = Float.valueOf(temp[0])*0.001;}
+                    else{gn_quantity = Float.valueOf(temp[0]);}
+                    if(map.containsKey(myRs.getString("date_of_purchase"))){
+                        map.replace(myRs.getString("date_of_purchase"), map.get(myRs.getString("date_of_purchase")) + gn_quantity);
+                    }
+                    else{
+                        map.put(myRs.getString("date_of_purchase"), gn_quantity);
+                    }
                 }
-                return new ProductSalesHistory(ordered_count, ordered_date);
-            }
-            else if(product_name.equals("") != true){
-                Prestmt = myConn.prepareStatement("select count(distinct date_of_purchase) as count_date from product_sales where product_name = ? and (date_of purchase between ? and ?)");
-                Prestmt.setInt(1, product_id);
-                Prestmt.setDate(2, Date.valueOf(start_date));
-                Prestmt.setDate(2, Date.valueOf(end_date));
-                ResultSet myRs = Prestmt.executeQuery();
-                myRs.next();
-                
-                String[] ordered_date = new String[myRs.getInt("count_date")];
-                int[] ordered_count = new int[myRs.getInt("count_date")];
-                
-                Prestmt = myConn.prepareStatement("select count(date_of_purchase) as count_date, date_of_purchase from product_sales where product_name = ? and (date_of purchase between ? and ?) group by date_of_purchase order by date_of_purchase");
-                Prestmt.setInt(1, product_id);
-                Prestmt.setDate(2, Date.valueOf(start_date));
-                Prestmt.setDate(2, Date.valueOf(end_date));
-                myRs = Prestmt.executeQuery();
-                
-                int index = 0;
-                
-                while(myRs.next()){
-                    ordered_date[index] = myRs.getDate("date_of_purchase").toString();
-                    ordered_count[index] = myRs.getInt("count_date");
-                    index++;
-                }
-                return new ProductSalesHistory(ordered_count, ordered_date);
+                return (HashMap<String, Double>)map.clone();
             }
             else{
                 System.out.println("Both the values are empty");
-                return new ProductSalesHistory(new int[] {-1}, new String[] {"Error"});
+                map.clear();
+                map.put("Product ID Error",-1.00);
+                return (HashMap<String, Double>)map.clone();
             }
         } 
         catch(SQLException ex) {
             System.out.println(ex);
-            return new ProductSalesHistory(new int[] {-1}, new String[] {"Error"});
+            map.clear();
+            map.put("Error",-1.00);
+            return (HashMap<String, Double>)map.clone();
         }
     }
 }

@@ -26,12 +26,16 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
     /**
      * Creates new form EditProduct
      */
-    public DeleteEditProductFrame() {
+    static int choice = -1;
+    static String name = "";
+    public DeleteEditProductFrame(int choice, String name) {
         initComponents();
         loadProductsName("None");
         autoSuggestName();
         loadProductsID("-1");
         autoSuggestID();
+        this.choice = choice;
+        this.name = name;
     }
     
     private Vector<String> v1 = new Vector<String>();
@@ -241,6 +245,10 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         reset = new javax.swing.JButton();
         back = new javax.swing.JButton();
         load = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        minlimit = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -249,6 +257,12 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         combo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo2ActionPerformed(evt);
+            }
+        });
+
+        product_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                product_nameActionPerformed(evt);
             }
         });
 
@@ -282,6 +296,11 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         });
 
         back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
 
         load.setText("Load Results");
         load.addActionListener(new java.awt.event.ActionListener() {
@@ -289,6 +308,12 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                 loadActionPerformed(evt);
             }
         });
+
+        jLabel6.setText("Stock Minimum Limit ");
+
+        jLabel7.setText("Product Name, Quantity");
+
+        jLabel8.setText("Product ID");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -303,15 +328,14 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
                         .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
@@ -321,17 +345,26 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(product_name)
-                        .addComponent(product_quantity)
-                        .addComponent(price)
-                        .addComponent(stock, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(93, 93, 93)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(minlimit, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(product_name, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(product_quantity, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(price, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(stock, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
+                        .addGap(104, 104, 104))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -351,38 +384,39 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(load, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
+                    .addComponent(load, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(product_name, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_name, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(product_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(50, 50, 50))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(save)
-                                .addGap(33, 33, 33)))
+                        .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(product_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(save)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(105, 105, 105))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(delete)
-                        .addGap(36, 36, 36)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(stock, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
-                    .addComponent(reset, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(delete)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(stock, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(reset)
+                    .addComponent(jLabel6)
+                    .addComponent(minlimit, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -397,13 +431,14 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             String[] temp = product_quantity.getText().split(" ");
+            String[] temp1 = minlimit.getText().split(" ");
             double quantity = Double.parseDouble(temp[0]);
             String unit = temp[1];
             temp = stock.getText().split(" ");
             quantity = Double.parseDouble(temp[0]);
             quantity = Double.parseDouble(price.getText());
-            if((unit.contains("g") && temp[1].contains("g")) || (unit.contains("l") && temp[1].contains("l")) || (unit.equals(temp[1]))){
-                int result = edit_handler.edit_product_database(product_name.getText(), Integer.valueOf(tf1.getText()), product_quantity.getText(), quantity, stock.getText());
+            if((unit.contains("g") && temp[1].contains("g") && temp1[1].contains("g")) || (unit.contains("l") && temp[1].contains("l")) && temp1[1].contains("l") || (unit.equals(temp[1]) && unit.equals(temp1[1]))){
+                int result = edit_handler.edit_product_database(product_name.getText(), Integer.valueOf(tf1.getText()), product_quantity.getText(), quantity, stock.getText(), minlimit.getText());
                 switch (result) {
                     case 0:
                         javax.swing.JOptionPane.showMessageDialog(this,"Product Not found");
@@ -417,6 +452,7 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                         price.setText("");
                         product_quantity.setText("");
                         stock.setText("");
+                        minlimit.setText("");
                         tf.setText("");
                         tf1.setText("");
                         break;
@@ -425,7 +461,7 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                 }
             }
             else{
-                javax.swing.JOptionPane.showMessageDialog(this,"Check the units of stock and quantity");
+                javax.swing.JOptionPane.showMessageDialog(this,"Check the units of stock, quantity and stock minimum limit");
             }
         }
         catch(NumberFormatException ex){
@@ -440,12 +476,13 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             String products[] = edit_handler.fetch_product(Integer.valueOf(tf1.getText()));
-            if(products[0].equals("Failure")){javax.swing.JOptionPane.showMessageDialog(this,"Product ID not in the database");}
-            else if(products[0].equals("Error")){javax.swing.JOptionPane.showMessageDialog(this,"Database connection failure");}
+            if(products[0].equals("Failure")){javax.swing.JOptionPane.showMessageDialog(this,"Product ID not in the database");return;}
+            else if(products[0].equals("Error")){javax.swing.JOptionPane.showMessageDialog(this,"Database connection failure");return;}
             product_name.setText(products[0]);
             price.setText(products[1]);
             product_quantity.setText(products[2]);
             stock.setText(products[3]);
+            minlimit.setText(products[4]);
         }
         catch(NumberFormatException ex){
             javax.swing.JOptionPane.showMessageDialog(this,"Enter a valid Product ID");
@@ -454,7 +491,7 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        new DeleteEditProductFrame().setVisible(true);
+        new DeleteEditProductFrame(choice,name).setVisible(true);
         this.setVisible(false);
         try {
                 this.finalize();
@@ -480,6 +517,7 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
                     price.setText("");
                     product_quantity.setText("");
                     stock.setText("");
+                    minlimit.setText("");
                     tf.setText("");
                     tf1.setText("");
                     break;
@@ -491,6 +529,21 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this,"Enter a valid Product ID");
         }
     }//GEN-LAST:event_deleteActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        try {
+                this.finalize();
+            } catch (Throwable ex) {
+                javax.swing.JOptionPane.showMessageDialog(this,"Application failure");
+            }
+        new AdminChoice(choice, name).setVisible(true);
+    }//GEN-LAST:event_backActionPerformed
+
+    private void product_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_product_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_product_nameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -525,7 +578,11 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeleteEditProductFrame().setVisible(true);
+                if(choice != 1 || name.equals("")){
+                    new SPD_Mini_Project().setVisible(true);
+                    return;
+                }
+                new DeleteEditProductFrame(choice,name).setVisible(true);
             }
         });
     }
@@ -540,7 +597,11 @@ public class DeleteEditProductFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JButton load;
+    private javax.swing.JTextField minlimit;
     private javax.swing.JTextField price;
     private javax.swing.JTextField product_name;
     private javax.swing.JTextField product_quantity;

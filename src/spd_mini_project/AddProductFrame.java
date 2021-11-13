@@ -14,8 +14,12 @@ public class AddProductFrame extends javax.swing.JFrame {
     /**
      * Creates new form BillOrderGeneratorFrame
      */
-    public AddProductFrame() {
+    static int choice = -1;
+    static String name = "";
+    public AddProductFrame(int choice, String name) {
         initComponents();
+        this.choice = choice;
+        this.name = name;
     }
 
     AddProductDatabase add_db_handler = new AddProductDatabase();
@@ -73,6 +77,11 @@ public class AddProductFrame extends javax.swing.JFrame {
         });
 
         jButton3.setText("Back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Enter the total stock of the product (with units)");
 
@@ -159,7 +168,7 @@ public class AddProductFrame extends javax.swing.JFrame {
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        new AddProductFrame().setVisible(true);
+        new AddProductFrame(choice,name).setVisible(true);
         this.setVisible(false);
         try {
                 this.finalize();
@@ -205,6 +214,17 @@ public class AddProductFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_add_productActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        try {
+                this.finalize();
+            } catch (Throwable ex) {
+                javax.swing.JOptionPane.showMessageDialog(this,"Application failure");
+            }
+        new AdminChoice(choice, name).setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -236,7 +256,11 @@ public class AddProductFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddProductFrame().setVisible(true);
+                //if(choice != 1 || name.equals("")){
+                //    new SPD_Mini_Project().setVisible(true);
+                //    return;
+                //}
+                new AddProductFrame(choice,name).setVisible(true);
             }
         });
     }

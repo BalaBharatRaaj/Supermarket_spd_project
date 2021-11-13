@@ -10,7 +10,7 @@ import java.sql.*;
  * @author Bala
  */
 public class EditProductDatabase {
-    public int edit_product_database(String product_name, int product_id, String quantity, double price, String stock){
+    public int edit_product_database(String product_name, int product_id, String quantity, double price, String stock, String stock_limit){
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
@@ -23,11 +23,15 @@ public class EditProductDatabase {
                 Prestmt.setDouble(2,price);
                 Prestmt.setString(3,quantity);
                 Prestmt.setInt(4,product_id);
-                System.out.println(Prestmt.executeUpdate());
+                Prestmt.executeUpdate();
                 Prestmt = myConn.prepareStatement("update product_stock set stock = ? where product_id = ?");
                 Prestmt.setString(1, stock);
                 Prestmt.setFloat(2, product_id);
-                System.out.println(Prestmt.executeUpdate());
+                Prestmt.executeUpdate();
+                Prestmt = myConn.prepareStatement("update stock_limit set min_limit = ? where product_id = ?");
+                Prestmt.setString(1, stock_limit);
+                Prestmt.setInt(2, product_id);
+                Prestmt.executeUpdate();
                 return 1;
             }
             else{
@@ -43,7 +47,7 @@ public class EditProductDatabase {
     }
     
     public String[] fetch_product(int product_id){
-        String[] product = new String[4]; 
+        String[] product = new String[5]; 
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
@@ -59,6 +63,11 @@ public class EditProductDatabase {
                 product[1] = String.valueOf(myRs.getFloat("price"));
                 product[2] = myRs.getString("quantity");
                 product[3] = myRs1.getString("stock");
+                Prestmt = myConn.prepareStatement("select min_limit from stock_limit where product_id = ?");
+                Prestmt.setInt(1, product_id);
+                myRs1 = Prestmt.executeQuery();
+                myRs1.next();
+                product[4] = myRs1.getString("min_limit");
                 return product;
             }
             else{

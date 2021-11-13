@@ -13,13 +13,7 @@ public class RegisterCustomer {
     public String[] fetch_customer(String Mobile_number) {
             String[] cust_details = new String[4];
             try {
-                //int choice = 1;
-                //String name = "balabr2002@gmail.com";
-                //String pass = "123@435";
-                //connection to database
                 Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini-project", "root", "root");
-                //create statement 
-                //Statement myStmt = myConn.createStatement();
                 PreparedStatement Prestmt;
                 //prepare SQL statement
                 Prestmt = myConn.prepareStatement("select * from customers where phone_no = ?");
@@ -49,7 +43,7 @@ public class RegisterCustomer {
             PreparedStatement Prestmt = myConn.prepareStatement("select * from customers where aadhar_id = ? or phone_no = ?");
             Prestmt.setString(1, Aadhar_number);
             Prestmt.setString(2, mobile_no);
-            ResultSet myRs = Prestmt.executeQuery();
+            ResultSet myRs = Prestmt.executeQuery(); 
             if(myRs.next()) {
                     System.out.println("Aadhar number or mobile number already exists");
                     myConn.close();

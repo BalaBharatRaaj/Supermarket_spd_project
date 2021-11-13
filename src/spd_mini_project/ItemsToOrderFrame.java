@@ -19,9 +19,13 @@ public class ItemsToOrderFrame extends javax.swing.JFrame {
     /**
      * Creates new form ItemsToOrderFrame
      */
-    public ItemsToOrderFrame() {
+    static int choice = -1;
+    static String name = "";
+    public ItemsToOrderFrame(int choice, String name) {
         initComponents();
         this.model = (DefaultTableModel)jTable1.getModel();
+        this.choice = choice;
+        this.name = name;
     }
 
     ItemsToBeOrdered items_order = new ItemsToBeOrdered();
@@ -74,6 +78,11 @@ public class ItemsToOrderFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Load Items");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +134,17 @@ public class ItemsToOrderFrame extends javax.swing.JFrame {
         items_load();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        try {
+                this.finalize();
+            } catch (Throwable ex) {
+                javax.swing.JOptionPane.showMessageDialog(this,"Application failure");
+            }
+        new AdminChoice(choice, name).setVisible(true);
+    }//GEN-LAST:event_backActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -155,7 +175,11 @@ public class ItemsToOrderFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ItemsToOrderFrame().setVisible(true);
+                if(choice != 1 || name.equals("")){
+                    new SPD_Mini_Project().setVisible(true);
+                    return;
+                }
+                new ItemsToOrderFrame(choice,name).setVisible(true);
             }
         });
     }

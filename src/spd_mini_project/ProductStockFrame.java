@@ -5,7 +5,9 @@
  */
 package spd_mini_project;
 import Backend_Files.ProductStock;
+import java.awt.Font;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 /**
  *
  * @author Bala
@@ -15,10 +17,16 @@ public class ProductStockFrame extends javax.swing.JFrame {
     /**
      * Creates new form ProductStock
      */
-    public ProductStockFrame() {
+    static int choice = -1;
+    static String name = "";
+    public ProductStockFrame(int choice, String name) {
         initComponents();
         this.model = (DefaultTableModel)jTable1.getModel();
         this.product_stock_display();
+        this.choice = choice;
+        this.name = name;
+        JTableHeader header = jTable1.getTableHeader();
+        header.setFont(new Font("Maiandra GD", Font.BOLD, 18));
     }
     
     ProductStock stock_handler = new ProductStock();
@@ -114,6 +122,13 @@ public class ProductStockFrame extends javax.swing.JFrame {
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        try {
+                this.finalize();
+            } catch (Throwable ex) {
+                javax.swing.JOptionPane.showMessageDialog(this,"Application failure");
+            }
+        new AdminChoice(choice, name).setVisible(true);
     }//GEN-LAST:event_BackActionPerformed
 
     /**
@@ -147,7 +162,11 @@ public class ProductStockFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ProductStockFrame().setVisible(true);
+                //if(choice != 1 || name.equals("")){
+                //    new SPD_Mini_Project().setVisible(true);
+                //    return;
+                //}
+                new ProductStockFrame(choice,name).setVisible(true);
             }
         });
     }
