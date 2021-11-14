@@ -47,7 +47,7 @@ A [demonstration](https://github.com/BalaBharatRaaj/mini-project) of the product
 
 ## Presentation
 
-The required [presentation](https://github.com/BalaBharatRaaj/mini-project) was made in conjunction with the product developed.
+The required [presentation](https://www.canva.com/design/DAEvUs-ohco/dKStZOIH04M2_h8GHAJ78Q/view?utm_content=DAEvUs-ohco&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent) was made in conjunction with the product developed.
 
 ## Members
 
