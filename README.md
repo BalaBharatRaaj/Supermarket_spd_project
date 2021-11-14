@@ -46,7 +46,7 @@ The front-end files required are given below,
 | `BillProductFrame` | Implements actual billing of the system |
 | `DeleteEditProductFrame` | Deleting/Editing product details |
 | `EditCustomerDetailsFrame` | Editing customer details|
-| `ItemsToBeOrderFrame.java` | Displaying items under the minimum threshold |
+| `ItemsToBeOrderFrame` | Displaying items under the minimum threshold |
 | `Login` | Default login page |
 | `ProductStockFrame` | Displaying product details present in the inventory |
 | `PurchaseHistoryFrame` | View a customer's purchase history |
