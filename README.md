@@ -1,11 +1,61 @@
-# Supermarket Billing System
+ # Supermarket Billing System
+
+The aim of the product was to solve the problems given below,
+
+1. Reduce the number of applications required for the functioning of a Supermarket.
+2. Integrate various applications such as billing and inventory management together. 
+3. Reduce the time and effort involved in the billing process.
+4. Provide an exceptional shopping service to customers. 
 
 ## Outline
- * Paper bills are now the primary channel of communication between companies and their customers.
- * However, their potential for personalization is limited, and they are not interactive. 
- * If a customer wants to react to something in his paper bill – for example, to make a customer service inquiry or to order a new service – he must make a telephone call. Internet  Billing promises far more than a new and inexpensive way to deliver billing information. 
- * Industry experts predict that Internet Billing will fundamentally change the way companies interact with their customers. 
- * Eventually, the Internet Bill will be an interactive entry to a host of additional services including customer self-care, automated sales one-to one marketing. 
- * The Internet Bill will become the gateway through which customers and companies have electronic one to one dialogs. 
- * The project has various functionality in order to achive less cumbersome biling facility at the shop.
+
+
+## Software Requirements Specification (SRS)
+
+The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIogAq4/view?usp=sharing) was compiled and documented.
+
+## Software Design Document (SDD)
+
+The required [SDD](https://github.com/BalaBharatRaaj/mini-project) was compiled and documented.
+
+## Code Explanation
+
+## Software Tool Requirements
+
+- Front-End Tools - Java, NetBeans GUI 
+- Back-End Tools - SQL
+- Servers Used - MySQL Server, Apache Tomcat Server
+- Operating System - Windows 7+
+
+
+## Hardware Tool Requirements
+- **Server Side**
+   - Monitor - 1024 x 768 Resolution
+   - Processor - Intel or AMD 2 GHZ
+   - RAM - 4 GB
+   - Disk Space - 10 GB
+
+- **Client Side**
+   - Monitor - 1024 x 768 Resolution
+   - Processor - Intel or AMD 1 GHZ
+   - RAM - 512 MB
+   - Disk Space - 2 GB
+
+## Screen Recording
+
+A [demonstration](https://github.com/BalaBharatRaaj/mini-project) of the product illustrating its functionalities was cataloged.  
+
+## Presentation
+
+The required [presentation](https://www.canva.com/design/DAEvUs-ohco/dKStZOIH04M2_h8GHAJ78Q/view?utm_content=DAEvUs-ohco&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent) was made in conjunction with the product developed.
+
+## Members
+
+- 19Z201   -  A. Akash, [@akash1022](https://github.com/akash1022)
+- 19Z204   -  Ashwin Rema [@ashwin-rema](https://github.com/ashwin-rema)
+- 19Z205   -  Bala Bharat Raaj G S [@BalaBharatRaaj](https://github.com/BalaBharatRaaj/)
+- 19Z213   -  Gondi Rajeev [@rajeevgondi](https://github.com/rajeevgondi)
+- 19Z221   -  Naresh Kalyanasundaram [@Naresh2002k](https://github.com/Naresh2002k)
+- 19Z238   -  Sairam Vaidya M. [@sairam2661](https://github.com/sairam2661/)
+
 
