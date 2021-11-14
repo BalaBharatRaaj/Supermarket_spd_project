@@ -157,10 +157,10 @@ public class ProductStockFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //if(choice != 1 || name.equals("")){
-                //    new SPD_Mini_Project().setVisible(true);
-                //    return;
-                //}
+                if(choice != 1 || name.equals("")){
+                    new SPD_Mini_Project().setVisible(true);
+                    return;
+                }
                 new ProductStockFrame(choice,name).setVisible(true);
             }
         });

@@ -27,6 +27,9 @@ public class DeleteProductDatabase {
                 if(myRs.next()){
                     return 2;
                 }
+                Prestmt = myConn.prepareStatement("delete from stock_limit where product_id = ?");
+                Prestmt.setInt(1, product_id);
+                Prestmt.executeUpdate();
                 Prestmt = myConn.prepareStatement("delete from product_stock where product_id = ?");
                 Prestmt.setInt(1, product_id);
                 Prestmt.executeUpdate();

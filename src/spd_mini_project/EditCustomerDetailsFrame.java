@@ -420,7 +420,7 @@ public class EditCustomerDetailsFrame extends javax.swing.JFrame {
                     javax.swing.JOptionPane.showMessageDialog(this,"Customer has a history of product purchases. Cannot delete the history");
                     break;
                 case 1:
-                    javax.swing.JOptionPane.showMessageDialog(this,"Product Deleted Successfully");
+                    javax.swing.JOptionPane.showMessageDialog(this,"Customer Deleted Successfully");
                     name.setText("");
                     address.setText("");
                     mobno.setText("");
