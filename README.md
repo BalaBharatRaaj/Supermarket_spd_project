@@ -19,7 +19,7 @@ The required [SDD](https://github.com/BalaBharatRaaj/mini-project) was compiled 
 
 ## Code Explanation
 
-The backend files required are given below,
+The back-end files required are given below,
 
 | File | Description |
 | --- | --- |
@@ -37,6 +37,23 @@ The backend files required are given below,
 | `RegisterCustomer.java` | Register a new customer to the system |
 | `Simple.java` | Implementing basic functionality to assist `Login_Backend.java`  |
 
+The front-end files required are given below,
+
+| File | Description |
+| --- | --- |
+| `AddProductFrame` | Adding product details to the database|
+| `AdminChoice` | Goes to admin login page on successful adming login |
+| `BillProductFrame` | Implements actual billing of the system |
+| `DeleteEditProductFrame` | Deleting/Editing product details |
+| `EditCustomerDetailsFrame` | Editing customer details|
+| `ItemsToBeOrderFrame.java` | Displaying items under the minimum threshold |
+| `Login` | Default login page |
+| `ProductStockFrame` | Displaying product details present in the inventory |
+| `PurchaseHistoryFrame` | View a customer's purchase history |
+| `RegisterCustomerForm` | Registering a new customer to the system |
+| `SPD_Mini_Project` | Default page of the system |
+| `SalesHistoryFrame` | View the history of sales of a given product |
+| `ShopkeeperChoice` | Choice for the type of user |
 
 ## Software Tool Requirements
 
