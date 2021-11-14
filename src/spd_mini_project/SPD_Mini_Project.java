@@ -37,106 +37,85 @@ public class SPD_Mini_Project extends javax.swing.JFrame {
         proceed = new javax.swing.JButton();
         close = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(java.awt.Color.gray);
-        setLocation(new java.awt.Point(500, 230));
+        setLocation(new java.awt.Point(650, 200));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 255));
+        jLabel1.setBackground(new java.awt.Color(20, 33, 61));
+        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 26)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(173, 255, 47));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("WELCOME TO RABANS SUPERMARKET");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel1.setText("WELCOME TO BANARAS SUPERMARKET");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel1.setOpaque(true);
         jLabel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jLabel1PropertyChange(evt);
             }
         });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 550, 70));
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Forte", 3, 18)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(0, 255, 51));
+        jRadioButton1.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(173, 255, 47));
         jRadioButton1.setText("Shop Worker");
         jRadioButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jRadioButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jRadioButton1.setOpaque(false);
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 210, 210, 52));
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(0, 255, 204));
-        jRadioButton2.setText("Administratior");
+        jRadioButton2.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(173, 255, 47));
+        jRadioButton2.setText("Administrator");
+        jRadioButton2.setOpaque(false);
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 210, 52));
 
-        proceed.setBackground(new java.awt.Color(188, 191, 238));
-        proceed.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        proceed.setBackground(new java.awt.Color(20, 33, 61));
+        proceed.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        proceed.setForeground(new java.awt.Color(255, 218, 109));
         proceed.setText("Proceed");
         proceed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedActionPerformed(evt);
             }
         });
+        getContentPane().add(proceed, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, 126, 42));
 
-        close.setBackground(new java.awt.Color(210, 202, 255));
-        close.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        close.setBackground(new java.awt.Color(20, 33, 61));
+        close.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        close.setForeground(new java.awt.Color(255, 218, 109));
         close.setText("Close");
         close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeActionPerformed(evt);
             }
         });
+        getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 500, 126, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/sup1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/Banaras Supermarket(Home page-2).jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(306, 306));
         jLabel2.setMinimumSize(new java.awt.Dimension(306, 306));
         jLabel2.setPreferredSize(new java.awt.Dimension(306, 306));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 0, 610, 590));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(240, 240, 240)
-                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(242, 242, 242)
-                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(proceed, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(462, 462, 462)
-                .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110)
-                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
-                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(118, 118, 118)
-                .addComponent(proceed, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(530, 530, 530)
-                .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jLabel3.setBackground(new java.awt.Color(20, 33, 61));
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -225,6 +204,7 @@ public class SPD_Mini_Project extends javax.swing.JFrame {
     private javax.swing.JButton close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JButton proceed;

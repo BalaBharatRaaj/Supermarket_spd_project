@@ -20,6 +20,7 @@ public class ProductStock {
 	    myRes = Prestmt.executeQuery();
             myRes.next();
             count = myRes.getInt("count_stock");
+            //System.out.println("Here1");
             String[][] products = new String[count][4]; 
             Prestmt = myConn.prepareStatement("select product_id, product_name, quantity, price from products");
 	    myRes = Prestmt.executeQuery();
@@ -29,6 +30,7 @@ public class ProductStock {
                 Prestmt.setInt(1, myRes.getInt("product_ID"));
                 myRes1 = Prestmt.executeQuery();
                 myRes1.next();
+                //System.out.println("Here1");
                 products[i][0] = String.valueOf(myRes.getInt("product_ID"));
                 products[i][1] = myRes.getString("product_name");
                 products[i][2] = myRes1.getString("stock");

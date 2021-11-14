@@ -59,30 +59,36 @@ public class RegisterCustomerForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(575, 200));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(20, 33, 61));
-        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 218, 109));
         jLabel1.setText("REGISTER CUSTOMER");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 280, -1));
 
-        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 218, 109));
         jLabel2.setText("Customer Name");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 218, 109));
         jLabel3.setText("Customer Address");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 218, 109));
         jLabel4.setText("Customer Mobile Number");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 218, 109));
         jLabel5.setText("Customer Aadhar Number");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
 
         register.setBackground(new java.awt.Color(20, 33, 61));
-        register.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        register.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         register.setForeground(new java.awt.Color(255, 218, 109));
         register.setText("Register");
         register.addActionListener(new java.awt.event.ActionListener() {
@@ -90,9 +96,10 @@ public class RegisterCustomerForm extends javax.swing.JFrame {
                 registerActionPerformed(evt);
             }
         });
+        getContentPane().add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 120, -1));
 
         reset.setBackground(new java.awt.Color(20, 33, 61));
-        reset.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        reset.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         reset.setForeground(new java.awt.Color(255, 218, 109));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
@@ -100,22 +107,28 @@ public class RegisterCustomerForm extends javax.swing.JFrame {
                 resetActionPerformed(evt);
             }
         });
+        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 120, -1));
 
-        name.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        name.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 166, -1));
 
-        address.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        address.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 166, -1));
 
-        mobno.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        mobno.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        getContentPane().add(mobno, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 166, -1));
 
-        aadhar.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        aadhar.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        aadhar.setToolTipText("");
+        getContentPane().add(aadhar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 166, -1));
 
         back.setBackground(new java.awt.Color(20, 33, 61));
-        back.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        back.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         back.setForeground(new java.awt.Color(255, 218, 109));
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -123,86 +136,15 @@ public class RegisterCustomerForm extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 39, 80, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/Banaras Supermarket - Register Form.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 260, 140));
 
         jLabel7.setBackground(new java.awt.Color(20, 33, 61));
         jLabel7.setOpaque(true);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel2)
-                .addGap(167, 167, 167)
-                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel3)
-                .addGap(154, 154, 154)
-                .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel4))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel5)
-                .addGap(96, 96, 96)
-                .addComponent(aadhar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(register, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(430, 430, 430)
-                .addComponent(mobno, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(back))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addComponent(jLabel4)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(aadhar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(reset)
-                    .addComponent(register)))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(mobno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

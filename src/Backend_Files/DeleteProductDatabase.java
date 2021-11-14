@@ -21,7 +21,12 @@ public class DeleteProductDatabase {
             Prestmt.setInt(1, product_id);
             myRs = Prestmt.executeQuery();
             if(myRs.next()){
-                System.out.println("Product ID exists");
+                Prestmt = myConn.prepareStatement("select * from product_sales where product_id = ?");
+                Prestmt.setInt(1, product_id);
+                myRs = Prestmt.executeQuery();
+                if(myRs.next()){
+                    return 2;
+                }
                 Prestmt = myConn.prepareStatement("delete from product_stock where product_id = ?");
                 Prestmt.setInt(1, product_id);
                 Prestmt.executeUpdate();

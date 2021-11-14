@@ -12,7 +12,7 @@ import java.sql.*;
  * @author Bala
  */
 public class AddProductDatabase {
-    public int add_product_database(String product_name, String quantity, double price, String stock){
+    public int add_product_database(String product_name, String quantity, double price, String stock, String minimum){
         try {
             Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spd_mini_project", "root", "root");
             PreparedStatement Prestmt;
@@ -37,6 +37,10 @@ public class AddProductDatabase {
                 Prestmt = myConn.prepareStatement("insert into product_stock(product_id,stock) values(?,?)");
                 Prestmt.setInt(1, myRs.getInt("max_id")+1);
                 Prestmt.setString(2, stock);
+                Prestmt.executeUpdate();
+                Prestmt = myConn.prepareStatement("insert into stock_limit(product_id,min_limit) values(?,?)");
+                Prestmt.setInt(1, myRs.getInt("max_id")+1);
+                Prestmt.setString(2, minimum);
                 Prestmt.executeUpdate();
                 //resultset
                 myConn.close();

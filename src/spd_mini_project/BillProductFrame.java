@@ -511,7 +511,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 690, 480));
 
         add_button.setBackground(new java.awt.Color(20, 33, 61));
-        add_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        add_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         add_button.setForeground(new java.awt.Color(255, 218, 109));
         add_button.setText("Add");
         add_button.addActionListener(new java.awt.event.ActionListener() {
@@ -522,7 +522,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(add_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, 220, -1));
 
         edit_button.setBackground(new java.awt.Color(20, 33, 61));
-        edit_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        edit_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         edit_button.setForeground(new java.awt.Color(255, 218, 109));
         edit_button.setText("Edit");
         edit_button.addActionListener(new java.awt.event.ActionListener() {
@@ -533,7 +533,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(edit_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 420, 220, -1));
 
         delete_button.setBackground(new java.awt.Color(20, 33, 61));
-        delete_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        delete_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         delete_button.setForeground(new java.awt.Color(255, 218, 109));
         delete_button.setText("Delete");
         delete_button.addActionListener(new java.awt.event.ActionListener() {
@@ -544,7 +544,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(delete_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 220, -1));
 
         print_button.setBackground(new java.awt.Color(20, 33, 61));
-        print_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        print_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         print_button.setForeground(new java.awt.Color(255, 218, 109));
         print_button.setText("Print");
         print_button.addActionListener(new java.awt.event.ActionListener() {
@@ -555,7 +555,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(print_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 540, 220, -1));
 
         reset_button.setBackground(new java.awt.Color(20, 33, 61));
-        reset_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        reset_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         reset_button.setForeground(new java.awt.Color(255, 218, 109));
         reset_button.setText("Reset");
         reset_button.addActionListener(new java.awt.event.ActionListener() {
@@ -566,7 +566,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, 220, -1));
 
         back_button.setBackground(new java.awt.Color(20, 33, 61));
-        back_button.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        back_button.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         back_button.setForeground(new java.awt.Color(255, 218, 109));
         back_button.setText("Back");
         back_button.addActionListener(new java.awt.event.ActionListener() {
@@ -580,7 +580,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 830, 170, 40));
 
         quick.setBackground(new java.awt.Color(20, 33, 61));
-        quick.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        quick.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
         quick.setForeground(new java.awt.Color(255, 218, 109));
         quick.setText("Quick Register");
         quick.addActionListener(new java.awt.event.ActionListener() {
@@ -686,7 +686,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
         tf1.setEditable(false);
         tf.setEditable(false);
         quantity_text.setText(String.valueOf(row.elementAt(2)));
-        total_amount -= ((Number) row.elementAt(3)).doubleValue();
+        total_amount = (double)Math.round((total_amount - ((Number) row.elementAt(3)).doubleValue())*100)/100;
         total.setEditable(true);
         total.setText(String.valueOf(total_amount));
         total.setEditable(true);
@@ -695,7 +695,7 @@ public final class BillProductFrame extends javax.swing.JFrame {
 
     private void delete_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_buttonActionPerformed
         // TODO add your handling code here:
-        total_amount -= ((Number) row.elementAt(3)).doubleValue();
+        total_amount = (double)Math.round((total_amount - ((Number) row.elementAt(3)).doubleValue())*100)/100;
         total.setEditable(true);
         total.setText(String.valueOf(total_amount));
         total.setEditable(true);
@@ -790,10 +790,10 @@ public final class BillProductFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                //if(choice != 2){
-                //    new SPD_Mini_Project().setVisible(true);
-                //    return;
-                //}
+                if(choice != 2){
+                    new SPD_Mini_Project().setVisible(true);
+                    return;
+                }
                 new BillProductFrame(choice, keeper_name).setVisible(true);
             }
         });

@@ -244,140 +244,130 @@ public class EditCustomerDetailsFrame extends javax.swing.JFrame {
         back = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(500, 250));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 218, 109));
         jLabel1.setText("EDIT CUSTOMER DETAILS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
 
+        combo1.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        combo1.setForeground(new java.awt.Color(20, 33, 61));
+        getContentPane().add(combo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 220, 35));
+
+        combo2.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        combo2.setForeground(new java.awt.Color(20, 33, 61));
+        getContentPane().add(combo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 153, 35));
+
+        load.setBackground(new java.awt.Color(20, 33, 61));
+        load.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        load.setForeground(new java.awt.Color(255, 218, 109));
         load.setText("Load details");
         load.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadActionPerformed(evt);
             }
         });
+        getContentPane().add(load, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, 35));
 
+        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 218, 109));
         jLabel2.setText("Customer Name");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, 30));
 
+        name.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        name.setForeground(new java.awt.Color(20, 33, 61));
+        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 240, 260, -1));
+
+        jLabel3.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 218, 109));
         jLabel3.setText("Customer Address");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 181, 30));
 
+        address.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        address.setForeground(new java.awt.Color(20, 33, 61));
+        address.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addressActionPerformed(evt);
+            }
+        });
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 330, 260, -1));
+
+        jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 218, 109));
         jLabel4.setText("Customer mobile number");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, -1, 30));
 
+        mobno.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        mobno.setForeground(new java.awt.Color(20, 33, 61));
+        getContentPane().add(mobno, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 420, 260, -1));
+
+        save.setBackground(new java.awt.Color(20, 33, 61));
+        save.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        save.setForeground(new java.awt.Color(255, 218, 109));
         save.setText("Save changes");
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveActionPerformed(evt);
             }
         });
+        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 240, 175, -1));
 
+        delete.setBackground(new java.awt.Color(20, 33, 61));
+        delete.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        delete.setForeground(new java.awt.Color(255, 218, 109));
         delete.setText("Delete");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
             }
         });
+        getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, 175, -1));
 
+        reset.setBackground(new java.awt.Color(20, 33, 61));
+        reset.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        reset.setForeground(new java.awt.Color(255, 218, 109));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetActionPerformed(evt);
             }
         });
+        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 420, 175, -1));
 
+        back.setBackground(new java.awt.Color(20, 33, 61));
+        back.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 218, 109));
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 36, -1, -1));
 
-        jLabel5.setText("Customer Name, Phone number");
+        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 218, 109));
+        jLabel5.setText("Customer Details");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, 30));
 
+        jLabel6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 218, 109));
         jLabel6.setText("Aadhar ID");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(back))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(87, 87, 87)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(name)
-                                    .addComponent(address)
-                                    .addComponent(mobno, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
-                                .addGap(120, 120, 120))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                                .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(74, 74, 74)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(reset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(load)
-                            .addComponent(delete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(back))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(load, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(save)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(mobno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(delete)))
-                .addGap(22, 22, 22)
-                .addComponent(reset)
-                .addContainerGap(105, Short.MAX_VALUE))
-        );
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/Banaras Supermarket.jpg"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 260, 140));
+
+        jLabel7.setBackground(new java.awt.Color(20, 33, 61));
+        jLabel7.setOpaque(true);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -487,6 +477,10 @@ public class EditCustomerDetailsFrame extends javax.swing.JFrame {
         new ShopkeeperChoice(choice, keeper_name).setVisible(true);
     }//GEN-LAST:event_backActionPerformed
 
+    private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -538,6 +532,8 @@ public class EditCustomerDetailsFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JButton load;
     private javax.swing.JTextField mobno;
     private javax.swing.JTextField name;

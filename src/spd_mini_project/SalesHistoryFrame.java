@@ -269,6 +269,7 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(500, 250));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
@@ -405,6 +406,9 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
 
     private void disp_chartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disp_chartActionPerformed
         // TODO add your handling code here:
+        if(tf1.getText().length() == 0 || tf1.getText().length() == 0 || select.getSelectedIndex() == -1){
+            javax.swing.JOptionPane.showMessageDialog(this,"Fill in the required details");return;
+        }
         if(select.getSelectedItem().equals("Date Range")){
             String temp_datepurchase;
             HashMap<String, Double> hm;
@@ -435,7 +439,8 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
             p.setRangeGridlinePaint(java.awt.Color.BLACK);
             ChartFrame frame = new ChartFrame("Stock of the product sold in the given date range",chart);
             frame.setVisible(true);
-            frame.setSize(450,350);  
+            frame.setSize(450,350);
+            frame.setLocation(700, 300);
         }
         else if(select.getSelectedItem().equals("Month")){
             int temp_year;
@@ -468,6 +473,7 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
             ChartFrame frame = new ChartFrame("Stock of the product sold in the given date range",chart);
             frame.setVisible(true);
             frame.setSize(450,350);
+            frame.setLocation(700, 300);
         }
         else if(select.getSelectedItem().equals("Year")){
             int temp_year;
@@ -500,6 +506,7 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
             ChartFrame frame = new ChartFrame("Stock of the product sold in the given date range",chart);
             frame.setVisible(true);
             frame.setSize(450,350);
+            frame.setLocation(700, 300);
         }    
     }//GEN-LAST:event_disp_chartActionPerformed
 
@@ -581,10 +588,10 @@ public class SalesHistoryFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //if(choice != 1 || name.equals("")){
-                //    new SPD_Mini_Project().setVisible(true);
-                //    return;
-                //}
+                if(choice != 1 || name.equals("")){
+                    new SPD_Mini_Project().setVisible(true);
+                    return;
+                }
                 new SalesHistoryFrame(choice,name).setVisible(true);
             }
         });

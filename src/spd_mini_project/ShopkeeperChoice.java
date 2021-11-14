@@ -20,7 +20,7 @@ public class ShopkeeperChoice extends javax.swing.JFrame {
         initComponents();
         this.choice = choice;
         this.name = name;
-        jLabel1.setText("WELCOME SHOPKEEPER "+name.toUpperCase());
+        jLabel1.setText("<html><pre style='font-family:Maiandra GD'>WELCOME SHOPKEEPER<center>"+name.toUpperCase()+"</center></pre><html>"); 
     }
 
     /**
@@ -40,85 +40,81 @@ public class ShopkeeperChoice extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(605, 240));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 218, 109));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("WELCOME SHOPKEEPER");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 310, -1));
 
+        submit.setBackground(new java.awt.Color(20, 33, 61));
+        submit.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        submit.setForeground(new java.awt.Color(255, 218, 109));
         submit.setText("Continue");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitActionPerformed(evt);
             }
         });
+        getContentPane().add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
 
+        logout.setBackground(new java.awt.Color(20, 33, 61));
+        logout.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        logout.setForeground(new java.awt.Color(255, 218, 109));
         logout.setText("Logout");
         logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logoutActionPerformed(evt);
             }
         });
+        getContentPane().add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 120, -1));
 
+        jRadioButton1.setBackground(new java.awt.Color(20, 33, 61));
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(255, 218, 109));
         jRadioButton1.setText("Product Billing");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
 
+        jRadioButton2.setBackground(new java.awt.Color(20, 33, 61));
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(255, 218, 109));
         jRadioButton2.setText("Register New Customer");
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
+        jRadioButton3.setBackground(new java.awt.Color(20, 33, 61));
         buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jRadioButton3.setForeground(new java.awt.Color(255, 218, 109));
         jRadioButton3.setText("Delete Customer or Edit Customer Details");
+        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
 
+        jRadioButton4.setBackground(new java.awt.Color(20, 33, 61));
         buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jRadioButton4.setForeground(new java.awt.Color(255, 218, 109));
         jRadioButton4.setText("Customer Purchase History");
+        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(submit)
-                        .addGap(71, 71, 71)
-                        .addComponent(logout))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1)
-                .addGap(62, 62, 62)
-                .addComponent(jRadioButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submit)
-                    .addComponent(logout))
-                .addGap(90, 90, 90))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/Banaras Supermarket.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 260, 140));
+
+        jLabel2.setBackground(new java.awt.Color(20, 33, 61));
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,7 +141,7 @@ public class ShopkeeperChoice extends javax.swing.JFrame {
                 } catch (Throwable ex) {
                     javax.swing.JOptionPane.showMessageDialog(this,"Application failure");
                 }
-            new RegisterCustomerForm(choice, name).setVisible(true);
+            new RegisterCustomerForm(false, choice, name).setVisible(true);
         }
         else if(jRadioButton3.isSelected()){
             this.setVisible(false);
@@ -220,6 +216,8 @@ public class ShopkeeperChoice extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
