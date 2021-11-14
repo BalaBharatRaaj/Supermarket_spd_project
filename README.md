@@ -1,4 +1,4 @@
- # Supermarket Billing System
+# Supermarket Billing System
 
 The aim of the product was to solve the problems given below,
 
@@ -43,7 +43,7 @@ The required [SDD](https://github.com/BalaBharatRaaj/mini-project) was compiled 
 
 ## Screen Recording
 
-A [demonstration](https://github.com/BalaBharatRaaj/mini-project) of the product illustrating its functionalities was cataloged.  
+A [demonstration](https://drive.google.com/file/d/1OPzOpbA6omLGcQaeNYxzhxE-9efFpJJT/view?usp=sharing) of the product illustrating its functionalities was cataloged.  
 
 ## Presentation
 
@@ -57,5 +57,3 @@ The required [presentation](https://www.canva.com/design/DAEvUs-ohco/dKStZOIH04M
 - 19Z213   -  Gondi Rajeev [@rajeevgondi](https://github.com/rajeevgondi)
 - 19Z221   -  Naresh Kalyanasundaram [@Naresh2002k](https://github.com/Naresh2002k)
 - 19Z238   -  Sairam Vaidya M. [@sairam2661](https://github.com/sairam2661/)
-
-
