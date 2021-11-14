@@ -9,7 +9,6 @@ The aim of the product was to solve the problems given below,
 
 ## Outline
 
-
 ## Software Requirements Specification (SRS)
 
 The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIogAq4/view?usp=sharing) was compiled and documented.
@@ -19,6 +18,25 @@ The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIo
 The required [SDD](https://github.com/BalaBharatRaaj/mini-project) was compiled and documented.
 
 ## Code Explanation
+
+The backend files required are given below,
+
+| File | Description |
+| --- | --- |
+| `AddProduct.java` | Assists in the implementation of `AddProductFrame` |
+| `AddProductDatabase.java` | Adding a new product to the database |
+| `DeleteProductDatabase.java` | Deleting a product from the database |
+| `EditCustomerDetails.java` | Editing a given customer's details |
+| `EditProductDatabase.java` | Editing a product present in the database |
+| `ItemsToBeOrdered.java` | Displaying items under the minimum threshold |
+| `Login_Backend.java` | Functions to facilitate the login functionality |
+| `PrintFinalBill.java` | Printing the final bill generated |
+| `ProductSalesHistory.java` | View the history of sales of a given product |
+| `ProductStock.java` | View existing stock details of products |
+| `PurchaseHistory.java` | View the history of purchases made by a customer |
+| `RegisterCustomer.java` | Register a new customer to the system |
+| `Simple.java` | Implementing basic functionality to assist `Login_Backend.java`  |
+
 
 ## Software Tool Requirements
 
