@@ -1,5 +1,9 @@
 # Supermarket Billing System
-![GitHub contributors](https://img.shields.io/github/contributors/BalaBharatRaaj/Supermarket_spd_project?color=bright%20green)
+![Contributors](https://img.shields.io/badge/contributors-6-green)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Coverage](https://img.shields.io/badge/code--coverage-99%25-brightgreen)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
+<br/>
 
 The aim of the product was to solve the problems given below,
 
@@ -24,23 +28,23 @@ The back-end files required are given below,
 
 | File | Description |
 | :---: | :---: |
-| `AddProduct.java` | Assists in the implementation of `AddProductFrame` |
-| `AddProductDatabase.java` | Add a new product to the database |
-| `DeleteProductDatabase.java` | Delete a product from the database |
-| `EditCustomerDetails.java` | Edit a given customer's details |
-| `EditProductDatabase.java` | Edit a product present in the database |
-| `ItemsToBeOrdered.java` | Display items under the minimum threshold |
-| `Login_Backend.java` | Functions to facilitate the login functionality |
-| `PrintFinalBill.java` | Print the final bill generated |
-| `ProductSalesHistory.java` | View the history of sales of a given product |
-| `ProductStock.java` | View existing stock details of products |
-| `PurchaseHistory.java` | View the history of purchases made by a customer |
-| `RegisterCustomer.java` | Register a new customer to the system |
+| `AddProduct.java` | Functions to insert product data into the database |
+| `AddProductDatabase.java` | Functions to fetch product data and suggestions for combo boxes |
+| `DeleteProductDatabase.java` | Functions to delete product data from the database |
+| `EditCustomerDetails.java` | Functions to edit the details of an existing customer |
+| `EditProductDatabase.java` | Functions to edit the details of an existing product |
+| `ItemsToBeOrdered.java` | Functions to fetch the items having stock below the minimum threshold  |
+| `Login_Backend.java` | Functions to verify the password and retrieve the corresponding name |
+| `PrintFinalBill.java` | Functions to insert the ordered products into the product sales table and to generate the bill file |
+| `ProductSalesHistory.java` | Functions to fetch the products sold in the given date range, month or year |
+| `ProductStock.java` | Fetching the stock and details of all existing products |
+| `PurchaseHistory.java` | Fetching the products purchased in a particular date range |
+| `RegisterCustomer.java` | Functions to add the details of the newly registered customer to the database |
 
 The front-end files required are given below,
 
 | File | Description |
-| :---: | :---: |
+| --- | --- |
 | `AddProductFrame` | Add product details to the database|
 | `AdminChoice` | Choice for the admin functionalities |
 | `BillProductFrame` | Implements actual billing of the system |
