@@ -34,8 +34,8 @@ The development of the required product was divided into three phases,
      - These diagrams were collaborated into the Software Design Document (SDD).
      - The development was carried out in the NetBeans IDE environment primarily, and was integrated with the mySQL database via the phpmyadmin administration tool.
      - The connections were made using the mySQL server and the Apache Tomcat server.
-     - Summarizing the development, the product has nice frames out of which four are present for the shop worker, and five for the admin of the super market. 
-     - The UI has been geared to be simple and pleasant to make the User Experience pleasing, less cumbersome and increase the efficiency of the work done.
+     - Summarizing the development, the product has nine frames out of which four are present for the shop worker, and five for the admin of the super market. 
+     - The UI has been geared to be simple and pleasant to make the User Experience pleasing, less cumbersome and also to increase the efficiency of the work done.
 
 ## Software Requirements Specification (SRS)
 
