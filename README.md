@@ -5,6 +5,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
 ![GitHub top language](https://img.shields.io/github/languages/top/BalaBharatRaaj/Supermarket_spd_project)
 ![Version](https://img.shields.io/badge/version-v1.0-informational)
+![GitHub](https://img.shields.io/github/license/BalaBharatRaaj/Supermarket_spd_project)
 <br/>
 
 The aim of the product was to solve the problems given below,
