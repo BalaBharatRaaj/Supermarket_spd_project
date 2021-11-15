@@ -35,7 +35,6 @@ The back-end files required are given below,
 | `ProductStock.java` | View existing stock details of products |
 | `PurchaseHistory.java` | View the history of purchases made by a customer |
 | `RegisterCustomer.java` | Register a new customer to the system |
-| `Simple.java` | Implementing basic functionality to assist `Login_Backend.java`  |
 
 The front-end files required are given below,
 
