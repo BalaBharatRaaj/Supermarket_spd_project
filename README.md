@@ -1,10 +1,11 @@
 # Supermarket Billing System
 ![Contributors](https://img.shields.io/badge/contributors-6-green)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/code--coverage-99%25-brightgreen)
+![Coverage](https://img.shields.io/badge/code--coverage-100%25-brightgreen)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
 ![GitHub top language](https://img.shields.io/github/languages/top/BalaBharatRaaj/Supermarket_spd_project)
 ![Version](https://img.shields.io/badge/version-v1.0-informational)
+![GitHub](https://img.shields.io/github/license/BalaBharatRaaj/Supermarket_spd_project)
 <br/>
 
 The aim of the product was to solve the problems given below,
@@ -15,13 +16,26 @@ The aim of the product was to solve the problems given below,
 4. Provide an exceptional shopping service to customers. 
 
 ## Outline
+The development of the required product was divided into three phases,
 
-* Paper bills are now the primary channel of communication between companies and their customers. This leads to humongous waste of paper in turn leading to loss of trees.
-* Our team thought to reduce the burden of printing bills in form of paper. So , the best alternative which we could think of was generation of e bill and to automate the whole process of billing. So, is the project E-Billing System.  
-* The e-Billing system has the capacity to illustrate and analyse all the major functionalities that are mandatory for a billing system to function in its full capacity. This project aims to complete the whole cycle of billing using technology. 
-* Using E – Bill us a boon as it comes with various other advantages. Some of them worth noting are quick, more accurate and concurrent with all the devices.
-* This project has 9 frames in which 4 are exclusively present for that shopkeeper and 5 which are exclusively present for the admin of the super market. 
-* Having donned with attractive UI, it makes the process of billing less cumbersome for the shopkeeper owing to the fact that this project has a lot of functionalities which are extensively used by the shopkeeper, thus increasing the efficiency of the work.
+1. ### Discovery Phase
+     - The first step was to identify the key stakeholders - the Administrator, and the various Shop Workers.
+     - The next step was to research the existing applications and identify their drawbacks, to gain a fundamental understanding on the product required by the Supermarket.
+     - The final step was to collaborate all the findings and generate a blueprint for the product required.
+     
+2. ### Strategy Phase
+     - The first step was to identify the overall description of the product based on the discovery phase.
+     - The next step was to identify the external interface requirements, functional requirements, non-functional requirements and the system features.
+     - An additional step to identify any other requirements necessary was also considered.
+     - The final step was to collaborate all the observations made into a Software Requirements Specification document (SRS).
+
+3. ### Design & Development Phase
+     - The first step was to come up with a blueprint for the design - this was done by constructing various UML diagrams for the SRS created in the strategy phase. 
+     - These diagrams were collaborated into the Software Design Document (SDD).
+     - The development was carried out in the NetBeans IDE environment primarily, and was integrated with the mySQL database via the phpmyadmin administration tool.
+     - The connections were made using the mySQL server and the Apache Tomcat server.
+     - Summarizing the development, the product has nine frames out of which four are present for the shop worker, and five for the admin of the super market. 
+     - The UI has been geared to be simple and pleasant to make the User Experience pleasing, less cumbersome and also to increase the efficiency of the work done.
 
 ## Software Requirements Specification (SRS)
 
