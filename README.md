@@ -24,7 +24,7 @@ The development of the required product was divided into three phases,
      - The final step was to collaborate all the findings and generate a blueprint for the product required.
      
 2. ### Strategy Phase
-     - The first step was to identify the overall description of the product based on the [discovery phase](#Discover-Phase).
+     - The first step was to identify the overall description of the product based on the discovery phase.
      - The next step was to identify the external interface requirements, functional requirements, non-functional requirements and the system features.
      - An additional step to identify any other requirements necessary was also considered.
      - The final step was to collaborate all the observations made into a Software Requirements Specification document (SRS).
