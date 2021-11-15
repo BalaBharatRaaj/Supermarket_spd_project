@@ -3,6 +3,7 @@
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/code--coverage-99%25-brightgreen)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
+![GitHub top language](https://img.shields.io/github/languages/top/BalaBharatRaaj/Supermarket_spd_project)
 <br/>
 
 The aim of the product was to solve the problems given below,
@@ -27,7 +28,7 @@ The required [SDD](https://drive.google.com/file/d/1HGPywzkzDTdyjjkVKwP2K5zBoVxD
 The back-end files required are given below,
 
 | File | Description |
-| :---: | :---: |
+| --- | --- |
 | `AddProduct.java` | Functions to insert product data into the database |
 | `AddProductDatabase.java` | Functions to fetch product data and suggestions for combo boxes |
 | `DeleteProductDatabase.java` | Functions to delete product data from the database |
