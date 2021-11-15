@@ -15,7 +15,7 @@ The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIo
 
 ## Software Design Document (SDD)
 
-The required [SDD](https://github.com/BalaBharatRaaj/mini-project) was compiled and documented.
+The required [SDD](https://drive.google.com/file/d/1HGPywzkzDTdyjjkVKwP2K5zBoVxDy7Ok/view) was compiled and documented.
 
 ## Code Explanation
 
