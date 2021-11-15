@@ -4,6 +4,7 @@
 ![Coverage](https://img.shields.io/badge/code--coverage-99%25-brightgreen)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
 ![GitHub top language](https://img.shields.io/github/languages/top/BalaBharatRaaj/Supermarket_spd_project)
+![Version](https://img.shields.io/badge/version-v1.0-informational)
 <br/>
 
 The aim of the product was to solve the problems given below,
