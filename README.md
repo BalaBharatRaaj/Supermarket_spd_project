@@ -1,5 +1,5 @@
 # Supermarket Billing System
-![Contributors](https://img.shields.io/badge/contributors-6-green)
+![Contributors](Https://img.shields.io/badge/contributors-6-green)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/code--coverage-99%25-brightgreen)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BalaBharatRaaj/Supermarket_spd_project)
@@ -21,7 +21,7 @@ The aim of the product was to solve the problems given below,
 * The e-Billing system has the capacity to illustrate and analyse all the major functionalities that are mandatory for a billing system to function in its full capacity. This project aims to complete the whole cycle of billing using technology. 
 * Using E – Bill us a boon as it comes with various other advantages. Some of them worth noting are quick, more accurate and concurrent with all the devices.
 * This project has 9 frames in which 4 are exclusively present for that shopkeeper and 5 which are exclusively present for the admin of the super market. 
-* Donning an attractive UI, it makes the process of billing less cumbersome for the shopkeeper owing to the fact that this project has a lot of functionalities which can be used extensively by the shopkeeper, thus increasing the efficiency of the work.
+* Having donned with attractive UI, it makes the process of billing less cumbersome for the shopkeeper owing to the fact that this project has a lot of functionalities which are extensively used by the shopkeeper, thus increasing the efficiency of the work.
 
 ## Software Requirements Specification (SRS)
 
