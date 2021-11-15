@@ -351,6 +351,8 @@ public final class BillProductFrame extends javax.swing.JFrame {
             String[] temp = quantity.split(" ");
             System.out.println(quantity);
             String unit = tf.getText().split(" ")[2];
+            double gn_quantity, user_quantity;
+            gn_quantity = Float.valueOf(temp[0]);
             if((unit.contains("g") && temp[1].contains("g")) || (unit.contains("l") && temp[1].contains("l")) || (unit.equals(temp[1]))){
                String[] products = add_handler.add_product(Integer.valueOf(tf1.getText()),quantity);
                 if(null != products[0])switch (products[0]) {
@@ -363,7 +365,6 @@ public final class BillProductFrame extends javax.swing.JFrame {
                     default:
                         break;
                 }
-                double gn_quantity, user_quantity;
                 temp = products[3].split(" ");
                 if(null == temp[1]){gn_quantity = Float.valueOf(temp[0]);}
                 else switch (temp[1]) {

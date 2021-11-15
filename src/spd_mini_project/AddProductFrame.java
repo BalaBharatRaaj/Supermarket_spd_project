@@ -77,7 +77,7 @@ public class AddProductFrame extends javax.swing.JFrame {
         getContentPane().add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 162, -1));
 
         minimum.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        getContentPane().add(minimum, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, 162, 30));
+        getContentPane().add(minimum, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, 162, -1));
 
         jLabel8.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 218, 109));
@@ -139,7 +139,7 @@ public class AddProductFrame extends javax.swing.JFrame {
 
         stock.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         stock.setForeground(new java.awt.Color(20, 33, 61));
-        getContentPane().add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, 162, 30));
+        getContentPane().add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, 162, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/spd_mini_project/Banaras Supermarket - Register Form.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
