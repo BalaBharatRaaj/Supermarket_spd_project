@@ -1,4 +1,5 @@
 # Supermarket Billing System
+![GitHub contributors](https://img.shields.io/github/contributors/BalaBharatRaaj/Supermarket_spd_project?color=bright%20green)
 
 The aim of the product was to solve the problems given below,
 
