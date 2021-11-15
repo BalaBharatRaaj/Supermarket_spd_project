@@ -7,7 +7,7 @@
 ![Version](https://img.shields.io/badge/version-v1.0-informational)
 <br/>
 
-the aim of the product was to solve the problems given below,
+The aim of the product was to solve the problems given below,
 
 1. Reduce the number of applications required for the functioning of a Supermarket.
 2. Integrate various applications such as billing and inventory management together. 
