@@ -24,13 +24,13 @@ The back-end files required are given below,
 | File | Description |
 | --- | --- |
 | `AddProduct.java` | Assists in the implementation of `AddProductFrame` |
-| `AddProductDatabase.java` | Adding a new product to the database |
-| `DeleteProductDatabase.java` | Deleting a product from the database |
-| `EditCustomerDetails.java` | Editing a given customer's details |
-| `EditProductDatabase.java` | Editing a product present in the database |
-| `ItemsToBeOrdered.java` | Displaying items under the minimum threshold |
+| `AddProductDatabase.java` | Add a new product to the database |
+| `DeleteProductDatabase.java` | Delete a product from the database |
+| `EditCustomerDetails.java` | Edit a given customer's details |
+| `EditProductDatabase.java` | Edit a product present in the database |
+| `ItemsToBeOrdered.java` | Display items under the minimum threshold |
 | `Login_Backend.java` | Functions to facilitate the login functionality |
-| `PrintFinalBill.java` | Printing the final bill generated |
+| `PrintFinalBill.java` | Print the final bill generated |
 | `ProductSalesHistory.java` | View the history of sales of a given product |
 | `ProductStock.java` | View existing stock details of products |
 | `PurchaseHistory.java` | View the history of purchases made by a customer |
@@ -40,19 +40,19 @@ The front-end files required are given below,
 
 | File | Description |
 | --- | --- |
-| `AddProductFrame` | Adding product details to the database|
-| `AdminChoice` | Goes to admin login page on successful adming login |
+| `AddProductFrame` | Add product details to the database|
+| `AdminChoice` | Choice for the admin functionalities |
 | `BillProductFrame` | Implements actual billing of the system |
-| `DeleteEditProductFrame` | Deleting/Editing product details |
-| `EditCustomerDetailsFrame` | Editing customer details|
-| `ItemsToBeOrderFrame` | Displaying items under the minimum threshold |
+| `DeleteEditProductFrame` | Delet/Edit product details |
+| `EditCustomerDetailsFrame` | Edit customer details|
+| `ItemsToBeOrderFrame` | Display items under the minimum threshold |
 | `Login` | Default login page |
-| `ProductStockFrame` | Displaying product details present in the inventory |
+| `ProductStockFrame` | Display product details present in the inventory |
 | `PurchaseHistoryFrame` | View a customer's purchase history |
-| `RegisterCustomerForm` | Registering a new customer to the system |
+| `RegisterCustomerForm` | Register a new customer to the system |
 | `SPD_Mini_Project` | Default page of the system |
 | `SalesHistoryFrame` | View the history of sales of a given product |
-| `ShopkeeperChoice` | Choice for the type of user |
+| `ShopkeeperChoice` | Choice for the shopkeeper functionalities |
 
 ## Software Tool Requirements
 
