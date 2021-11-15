@@ -23,7 +23,7 @@ The back-end files required are given below,
 
 | File | Description |
 | :---: | :---: |
-| `AddProduct.java`] | Assists in the implementation of `AddProductFrame` |
+| `AddProduct.java` | Assists in the implementation of `AddProductFrame` |
 | `AddProductDatabase.java` | Add a new product to the database |
 | `DeleteProductDatabase.java` | Delete a product from the database |
 | `EditCustomerDetails.java` | Edit a given customer's details |
