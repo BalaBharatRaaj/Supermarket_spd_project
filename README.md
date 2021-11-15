@@ -32,8 +32,8 @@ The development of the required product was divided into three phases,
 3. ### Design & Development Phase
      - The first step was to come up with a blueprint for the design - this was done by constructing various UML diagrams for the SRS created in the strategy phase. 
      - These diagrams were collaborated into the Software Design Document (SDD).
-     - The development was carried out in the NetBeans IDE environment primarily, and was integrated with the mySQL database via the phpmyadmin administration tool.
-     - The connections were made using the mySQL server and the Apache Tomcat server.
+     - The development was carried out in the NetBeans IDE environment primarily, and was integrated with the MySQL database via the phpmyadmin administration tool.
+     - The connections were made using the MySQL server and the Apache Tomcat server.
      - Summarizing the development, the product has nine frames out of which four are present for the shop worker, and five for the admin of the super market. 
      - The UI has been geared to be simple and pleasant to make the User Experience pleasing, less cumbersome and also to increase the efficiency of the work done.
 
