@@ -25,11 +25,11 @@ The aim of the product was to solve the problems given below,
 
 ## Software Requirements Specification (SRS)
 
-The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIogAq4/view?usp=sharing) was compiled and documented.
+The required [SRS](https://drive.google.com/file/d/15LTfXxsUyi1bItV58iJGIOlT4cIogAq4/view?usp=sharing) has been compiled and documented.
 
 ## Software Design Document (SDD)
 
-The required [SDD](https://drive.google.com/file/d/1HGPywzkzDTdyjjkVKwP2K5zBoVxDy7Ok/view) was compiled and documented.
+The required [SDD](https://drive.google.com/file/d/1HGPywzkzDTdyjjkVKwP2K5zBoVxDy7Ok/view) has been compiled and documented.
 
 ## Code Explanation
 
